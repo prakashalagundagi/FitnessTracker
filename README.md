@@ -1,214 +1,228 @@
-# Fitness Tracker App
+# 🏋️ Flutter AI Fitness Tracker
 
-A complete mobile fitness tracker app built with Flutter, featuring AI-powered pose detection, voice coaching, and comprehensive workout tracking.
+A **smart mobile fitness tracker app** built using **Flutter** that uses **AI pose detection** to automatically detect and count exercises using the device camera.
 
-## Features
+This application helps users track their workouts, monitor daily progress, and stay motivated with voice coaching and achievements.
 
-### Core Features
-- **Push-up Counter**: Manual and automatic counting with pose detection
-- **Camera-based Pose Detection**: Real-time exercise form tracking using Google ML Kit
-- **Voice Coach**: Motivational messages and exercise guidance
-- **Workout Recorder**: Track pushups, squats, situps, and plank exercises
-- **Achievement System**: Unlock badges and milestones
-- **Daily Progress Tracking**: Monitor your fitness journey
-- **Workout History**: Complete log of all your workouts
-- **Modern UI**: Clean, intuitive interface with smooth animations
+---
 
-### Screens
-1. **Home Screen**: Dashboard with stats, streak counter, and quick workout access
-2. **Workout Camera Screen**: Real-time pose detection and exercise counting
-3. **Progress Screen**: Charts, statistics, and performance analytics
-4. **Achievements Screen**: Badge collection and milestone tracking
-5. **Workout History Screen**: Complete workout log with filtering options
+# 📱 Features
 
-## Technical Stack
+### 💪 Push-Up Counter
 
-### Flutter Packages
-- `camera`: Camera access for pose detection
-- `google_mlkit_pose_detection`: AI-powered pose detection
-- `flutter_tts`: Text-to-speech for voice coaching
-- `sqflite`: Local database for data persistence
-- `provider`: State management
-- `intl`: Date formatting and localization
-- `google_fonts`: Custom typography
-- `lottie`: Animations
+Automatically counts push-ups using **camera pose detection**.
 
-### Architecture
-- **MVC Pattern**: Separation of concerns with models, views, and controllers
-- **Service Layer**: Centralized business logic
-- **Database Service**: SQLite operations with helper methods
-- **Voice Coach Service**: TTS management with motivational content
-- **Pose Detection Service**: ML Kit integration and exercise counting
+### 📷 Camera-Based Exercise Detection
 
-## Project Structure
+Uses **Google ML Kit Pose Detection** to analyze body movements.
+
+Supported exercises:
+
+* Push-ups
+* Squats
+* Sit-ups
+* Plank
+
+### 🔊 Voice Coach
+
+Provides motivational feedback using **Text-to-Speech**.
+
+Examples:
+
+* “Great job!”
+* “Keep going!”
+* “Halfway there!”
+
+### 🏆 Achievement System
+
+Unlock badges when reaching workout milestones.
+
+Example badges:
+
+* First Workout
+* 10 Pushups Badge
+* Fitness Warrior
+* 100 Pushups Champion
+
+### 📊 Daily Progress Tracking
+
+Displays daily workout statistics.
+
+### 📜 Workout History
+
+Stores and displays previous workouts.
+
+### 🎨 Clean Modern UI
+
+Simple and user-friendly Flutter interface.
+
+---
+
+# 🛠 Technologies Used
+
+| Technology     | Purpose                |
+| -------------- | ---------------------- |
+| Flutter        | Mobile App Development |
+| Dart           | Programming Language   |
+| Camera Package | Access device camera   |
+| Google ML Kit  | Pose detection         |
+| Flutter TTS    | Voice coaching         |
+| SQFlite        | Local database storage |
+
+---
+
+# 📦 Flutter Packages
 
 ```
-lib/
-├── main.dart                 # App entry point and navigation
-├── models/                   # Data models
-│   ├── workout.dart         # Workout data structure
-│   ├── achievement.dart     # Achievement system
-│   └── daily_progress.dart  # Daily tracking
-├── services/                # Business logic
-│   ├── database_service.dart    # SQLite operations
-│   ├── voice_coach_service.dart # TTS and coaching
-│   └── pose_detection_service.dart # ML Kit integration
-├── screens/                 # UI screens
-│   ├── home_screen.dart     # Main dashboard
-│   ├── workout_camera_screen.dart # Camera workout
-│   ├── progress_screen.dart # Progress analytics
-│   ├── achievements_screen.dart  # Badge system
-│   └── workout_history_screen.dart # Workout log
-├── widgets/                 # Reusable UI components
-└── utils/                   # Helper utilities
+camera
+google_mlkit_pose_detection
+flutter_tts
+sqflite
+path_provider
 ```
 
-## Getting Started
+Install dependencies:
 
-### Prerequisites
-- Flutter SDK (>=3.10.0)
-- Dart SDK (>=3.0.0)
-- Android Studio / VS Code
-- Physical device or emulator with camera
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd fitness_tracker
-```
-
-2. Install dependencies:
 ```bash
 flutter pub get
 ```
 
-3. Run the app:
+---
+
+# 📂 Project Structure
+
+```
+fitness_tracker/
+│
+├── lib/
+│   ├── main.dart
+│
+│   ├── screens/
+│   │   ├── home_screen.dart
+│   │   ├── camera_workout_screen.dart
+│   │   ├── progress_screen.dart
+│   │   ├── achievements_screen.dart
+│   │   └── history_screen.dart
+│
+│   ├── services/
+│   │   ├── pose_detector_service.dart
+│   │   ├── voice_coach_service.dart
+│   │   └── database_service.dart
+│
+│   ├── models/
+│   │   └── workout_model.dart
+│
+│   ├── widgets/
+│   │   └── workout_card.dart
+│
+│   └── utils/
+│       └── achievements.dart
+│
+├── android/
+├── ios/
+├── assets/
+├── pubspec.yaml
+└── README.md
+```
+
+---
+
+# 📸 App Screens
+
+### 🏠 Home Screen
+
+Main screen for navigating to workouts, progress, achievements, and history.
+
+### 📷 Workout Camera Screen
+
+Uses camera and AI to detect exercises and count repetitions.
+
+### 📊 Progress Screen
+
+Displays daily fitness statistics.
+
+### 🏆 Achievements Screen
+
+Shows badges and milestones.
+
+### 📜 Workout History Screen
+
+Displays previously completed workouts.
+
+---
+
+# ⚙️ Installation
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/fitness_tracker.git
+```
+
+### 2️⃣ Open the project
+
+```bash
+cd fitness_tracker
+```
+
+### 3️⃣ Install dependencies
+
+```bash
+flutter pub get
+```
+
+### 4️⃣ Run the application
+
 ```bash
 flutter run
 ```
 
-### Permissions
-The app requires the following permissions:
-- **Camera**: For pose detection and exercise tracking
-- **Microphone**: For voice coaching (optional)
-- **Storage**: For database and local data
+---
 
-## Usage
+# 📷 Camera Permission
 
-### Starting a Workout
-1. Tap the floating action button on the home screen
-2. Select exercise type (pushups, squats, situps, or plank)
-3. Position yourself in front of the camera
-4. Press START to begin counting
-5. Press STOP to finish and save your workout
+This app requires **camera access** for exercise detection.
 
-### Tracking Progress
-- View daily stats on the home screen
-- Check progress charts on the Progress screen
-- Monitor achievements and unlock new badges
-- Review complete workout history
+Add permission in:
 
-### Voice Coaching
-- Enable voice coaching for real-time motivation
-- Get exercise tips and form corrections
-- Receive milestone announcements
-- Hear achievement unlocks
+Android → `AndroidManifest.xml`
 
-## Pose Detection
-
-### Supported Exercises
-- **Push-ups**: Tracks elbow angle and rep counting
-- **Squats**: Monitors knee angle and depth
-- **Sit-ups**: Detects torso movement
-- **Plank**: Timer-based with form monitoring
-
-### Detection Accuracy
-- Ensure good lighting conditions
-- Position camera to capture full body
-- Wear contrasting clothing for better detection
-- Maintain consistent exercise form
-
-## Database Schema
-
-### Workouts Table
-- `id`: Primary key
-- `exerciseType`: Type of exercise
-- `reps`: Number of repetitions
-- `duration`: Duration in seconds
-- `timestamp`: Workout date/time
-- `notes`: Optional notes
-
-### Achievements Table
-- `id`: Primary key
-- `title`: Achievement name
-- `description`: Achievement details
-- `iconName`: Icon identifier
-- `requiredReps`: Requirement for unlock
-- `exerciseType`: Associated exercise
-- `isUnlocked`: Unlock status
-- `unlockedAt`: Unlock timestamp
-
-### Daily Progress Table
-- `id`: Primary key
-- `date`: Date of progress
-- `totalReps`: Total repetitions
-- `totalDuration`: Total workout time
-- `workoutsCompleted`: Number of workouts
-- `exerciseBreakdown`: Exercise-specific stats
-
-## Customization
-
-### Adding New Exercises
-1. Update `ExerciseType` enum in `workout.dart`
-2. Add pose detection logic in `pose_detection_service.dart`
-3. Update UI components and icons
-4. Add achievement definitions
-
-### Voice Messages
-- Edit motivational messages in `voice_coach_service.dart`
-- Add exercise-specific tips
-- Customize milestone announcements
-
-### UI Themes
-- Modify color schemes in `main.dart`
-- Update app icons and fonts
-- Customize card styles and animations
-
-## Troubleshooting
-
-### Common Issues
-- **Camera not working**: Check camera permissions
-- **Pose detection inaccurate**: Improve lighting and positioning
-- **Voice not working**: Check TTS settings and permissions
-- **Database errors**: Clear app data and restart
-
-### Performance Tips
-- Close camera when not in use
-- Limit pose detection frequency
-- Optimize database queries
-- Use efficient state management
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-For issues and questions:
-- Create an issue on GitHub
-- Check the troubleshooting section
-- Review the documentation
+``` <uses-permission android:name="android.permission.CAMERA"/>
+```
 
 ---
 
-Built with ❤️ using Flutter
+# 🚀 Future Improvements
+
+Possible improvements:
+
+* AI posture correction
+* Workout analytics graphs
+* Calories burned estimation
+* Firebase cloud backup
+* Leaderboard system
+* Social sharing
+
+---
+
+# 🎓 Educational Purpose
+
+This project is created for learning:
+
+* Flutter mobile development
+* AI pose detection
+* Computer vision basics
+* Mobile fitness applications
+
+---
+
+# 👨‍💻 Developer
+
+**Prakash A**
+Computer Science Engineering Student
+
+---
+
+# ⭐ Support
+
+If you like this project, please ⭐ **star the repository** on GitHub.
