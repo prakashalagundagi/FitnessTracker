@@ -39,7 +39,7 @@ Unlock badges when reaching workout milestones.
 
 Example badges:
 
-* First Workout
+* First Work
 * 10 Pushups Badge
 * Fitness Warrior
 * 100 Pushups Champion
