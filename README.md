@@ -2,7 +2,7 @@
 
 A **smart mobile fitness tracker app** built using **Flutter** that uses **AI pose detection** to automatically detect and count exercises using the device camera.
 
-This application helps users track their workouts, monitor daily progress, and stay motivated with voice coaching and achievements.
+This applicationtrack their workouts, monitor daily progress, and stay motivated with voice coaching and achievements.
 
 ---
 
