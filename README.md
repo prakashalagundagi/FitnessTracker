@@ -156,7 +156,7 @@ Displays previously completed workouts.
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/fitness_tracker.git
+git clone https://github.com/prakashalagundagi/fitness_tracker.git
 ```
 
 ### 2️⃣ Open the project
