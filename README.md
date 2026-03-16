@@ -54,7 +54,7 @@ Stores and displays previous workouts.
 
 ### 🎨 Clean Modern UI
 
-Simple and user-friendly Flutter interface.
+Simple and User-Friendly Flutter interface.
 
 ---
 
