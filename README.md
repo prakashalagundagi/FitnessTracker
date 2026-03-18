@@ -18,10 +18,10 @@ Uses **Google ML Kit Pose Detection** to analyze body movements.
 
 Supported exercises:
 
-* Push-ups
-* Squats
-* Sit-ups
-* Plank
+* PUSH-UPS 
+* SQUATS
+* SIT-UPS
+* FLANK
 
 ### 🔊 Voice Coach
 
